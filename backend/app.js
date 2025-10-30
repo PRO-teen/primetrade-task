@@ -9,11 +9,7 @@ const allowedOrigins = process.env.FRONTEND_URL.split(",");
 
 app.use(
   cors({
-    origin: (origin, callback) => {
-      if (!origin) return callback(null, true);
-      if (allowedOrigins.includes(origin)) return callback(null, true);
-      return callback(new Error("Not allowed by CORS"));
-    },
+    origin: "https://primetrade-task-git-main-ayush-yadavs-projects-ae02f4a6.vercel.app",
     credentials: true,
   })
 );
